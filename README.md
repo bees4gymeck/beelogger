@@ -31,6 +31,44 @@ Wir gehen davon aus, dass alles zusammengebaut ist und eine erste "elektrische" 
 Die von den Beelogger Sketchen verwendeten [Bibliotheken](https://beelogger.de/solar_und_universal/alle_programmcodes/bibliotheken/) müssen in genau der zur Verfügung gestellten Version verwendet werden. Sie müssen im "libraries" Verzeichnis deiner Sketche entpackt abgelegt werden.
 Die "System-Setup/-Check Sketche" sind auf der [beelogger... Test & Kalibrierung](https://beelogger.de/solar_und_universal/alle_programmcodes/kalibrierung_test/) bereitgestellt.
 
+![Screenshot der Verzeichnisse mit den Test-Sketchen](https://github.com/bees4gymeck/beelogger/assets/137496089/c54bddf9-f9d7-4b71-be54-4644164f3a0e)
+
+Ein erster Check der Komponenten wird mit System_Check_230607.ino durchgeführt.
+Die Ausgabe des Serial Monitors könnte wie folgt aussehen:
+```
+DS18B20 ?
+1  :  [C]: 25.81
+
+I2C-Scanner:
+scanning of I2C bus from 0x8 to 0x77...
+ found at addr: 0x57
+ found at addr: 0x68
+I2C scan done
+ 
+EE-Prom
+ is present at: 0x57
+1, 2, 3, 4, 
+    EE-Prom: 4 kByte
+ 
+DS3231
+ reset alarms
+ temperature from DS3231: 26.7°C
+ time in DS3231: 18.7.2023 14:06:00 
+ 
+Testing Com.-Modul
+AT
+OK
+ found
+AT+GMR
+AT version:1.1.0.0(May 11 2016 18:09:56)
+SDK version:1.5.4(baaeaebb)
+compile time:May 20 2016 15:08:19
+OK
+ 
+Low-Power activ.
+Sleep forever!
+```
+
 
 
 ### Checkliste
