@@ -227,9 +227,6 @@ Die Zeilen für die Konfiguration benötigen wir später beim Hauptprogramm.
 ### WLAN – ESP8266 Konfiguration
 Ob die auf [WLAN – ESP8266 Konfiguration](https://beelogger.de/netzwerk/wlan_esp8266/wlan_esp8266-config) beschriebene Konfiguration wirklich notwendig ist, ist noch nicht zu 100% bekannt. Es ist relativ aufwendig.
 
-### Verbindung mit dem Beelogger Community Server herstellen
-https://beelogger.de/netzwerk/wlan_esp8266/wlan
-
 ### Temperaturkompensation der Waage
 https://beelogger.de/sensoren/waegzellen_hx711/stockwaage-temperaturkompensation
 
@@ -244,7 +241,21 @@ Sammlung aller Parameterwerte die bei den Tests ermittelt werden.
  |Taragewicht||506502|Ergebnis der Waagen Kalibrierung mit ```beelogger_Kalibrierung_Waage_XXXXXX.ino```|
  |Skalierung||1070750.75|Ergebnis der Waagen Kalibrierung mit ```beelogger_Kalibrierung_Waage_XXXXXX.ino```|
  
+## 5. Beelogger Community Server Konto anlegen
+Ein Community Server Konto kostet nichts. Die Server werden in Deutschland betrieben.
+Zum [Einrichtung eines Community-Accounts](http://community.beelogger.de/einrichtung2.php?account=community) ist ein E-Mail notwendig.
+Der Benutzername darf nur 10 Zeichen lang sein. Du brauchst letztlich zwei Passwörter, einen für die Konfiguration und eines für das "Log".
+
+![grafik](https://github.com/bees4gymeck/beelogger/assets/137496089/209a85c4-8b43-4ad0-9221-78a8d674257b)
+
+Das Ergebnis:
+
+![grafik](https://github.com/bees4gymeck/beelogger/assets/137496089/38f3f929-a99a-4827-99ac-77891990fddb)
 
 
- 
+
+### Verbindung mit dem Beelogger Community Server herstellen
+[beelogger-Testprogramm – WLAN (ESP8266)](https://beelogger.de/netzwerk/wlan_esp8266/wlan) beschreibt wie man die Verbindung mit dem Community Server herstellt.  
+
+
  
