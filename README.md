@@ -21,13 +21,21 @@ https://beelogger.de/solar_und_universal/universal/uebersicht/beschaltung_und_au
 https://beelogger.de/solar_und_universal/universal/uebersicht/inbetriebnahme/
 
 ## 4. Programme für Test und Konfiguration der Komponenten ausführen
-Wir gehen davon aus, dass alles zusammengebaut ist und eine erste "elektrische" Inbetriebname, siehe [beelogger Anleitung](https://beelogger.de/solar_und_universal/universal/uebersicht/inbetriebnahme/) erfolgreich abgeschlossen wurde.
+Wir gehen davon aus, dass alles zusammengebaut ist und eine erste "elektrische" Inbetriebname, siehe [beelogger Anleitung](https://beelogger.de/solar_und_universal/universal/uebersicht/inbetriebnahme/) erfolgreich abgeschlossen wurde. Die Arduino-IDE ist installiert und der Beelogger wird mit Strom z.B. Akku oder Netzteil versorgt, alle Sensoren inkl Waage sind angeschlossen. WLAN ist vorhanden und Passwort ist bekannt.
+- [ ] Stromversorgung via Akku oder Netzteil vorhanden, Alle Module sind aufgesteckt und "Elektrischer" erster Test war ok.
+- [ ] Temperatur Sensor DHT11/22 und DS18B20 sind angeschlossen
+- [ ] Waage mit Wägezellen sind angeschlossen
+- [ ] Arduino-IDE installiert, [Beelogger Libs](https://beelogger.de/solar_und_universal/alle_programmcodes/bibliotheken/) sind konfiguriert
 
-### 
+### System Checks
+Die von den Beelogger Sketchen verwendeten [Bibliotheken](https://beelogger.de/solar_und_universal/alle_programmcodes/bibliotheken/) müssen in genau der zur Verfügung gestellten Version verwendet werden. Sie müssen im "libraries" Verzeichnis deiner Sketche entpackt abgelegt werden.
+Die "System-Setup/-Check Sketche" sind auf der [beelogger... Test & Kalibrierung](https://beelogger.de/solar_und_universal/alle_programmcodes/kalibrierung_test/) bereitgestellt.
+
 
 
 ### Checkliste
  |Test|Status|Anmerkungen|
  |---|---|---|
+ 
  |Arduino Libs in genau der bei beelogger angegebenen Version in IDE konfiguriert|||
  |jetzt|aber| gut|
