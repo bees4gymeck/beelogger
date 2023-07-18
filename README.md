@@ -227,7 +227,11 @@ Die Zeilen für die Konfiguration benötigen wir später beim Hauptprogramm.
 ### WLAN – ESP8266 Konfiguration
 Ob die auf [WLAN – ESP8266 Konfiguration](https://beelogger.de/netzwerk/wlan_esp8266/wlan_esp8266-config) beschriebene Konfiguration wirklich notwendig ist, ist noch nicht zu 100% bekannt. Es ist relativ aufwendig.
 
+### Verbindung mit dem Beelogger Community Server herstellen
+https://beelogger.de/netzwerk/wlan_esp8266/wlan
 
+### Temperaturkompensation der Waage
+https://beelogger.de/sensoren/waegzellen_hx711/stockwaage-temperaturkompensation
 
 ### Checkliste
 Sammlung aller Parameterwerte die bei den Tests ermittelt werden.
