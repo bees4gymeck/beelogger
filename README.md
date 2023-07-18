@@ -26,14 +26,15 @@ Wir gehen davon aus, dass alles zusammengebaut ist und eine erste "elektrische" 
 - [ ] Temperatur Sensor DHT11/22 und DS18B20 sind angeschlossen
 - [ ] Waage mit Wägezellen sind angeschlossen
 - [ ] Arduino-IDE installiert, [Beelogger Libs](https://beelogger.de/solar_und_universal/alle_programmcodes/bibliotheken/) sind konfiguriert
+- [ ] Voltmeter für die Messung der Akkuspannung liegt bereit
 
-### System Checks
+### System Check {System_Check_XXXXXX.ino}- Prüft auf vorhandene Komponenten (Uhr, Sensoren, WLAN...)
 Die von den Beelogger Sketchen verwendeten [Bibliotheken](https://beelogger.de/solar_und_universal/alle_programmcodes/bibliotheken/) müssen in genau der zur Verfügung gestellten Version verwendet werden. Sie müssen im "libraries" Verzeichnis deiner Sketche entpackt abgelegt werden.
 Die "System-Setup/-Check Sketche" sind auf der [beelogger... Test & Kalibrierung](https://beelogger.de/solar_und_universal/alle_programmcodes/kalibrierung_test/) bereitgestellt.
 
 ![Screenshot der Verzeichnisse mit den Test-Sketchen](https://github.com/bees4gymeck/beelogger/assets/137496089/c54bddf9-f9d7-4b71-be54-4644164f3a0e)
 
-Ein erster Check der Komponenten wird mit System_Check_230607.ino durchgeführt.
+Ein erster Check der Komponenten wird mit ```System_Check_230607.ino``` durchgeführt.
 Die Ausgabe des Serial Monitors könnte wie folgt aussehen:
 ```
 DS18B20 ?
@@ -69,11 +70,46 @@ Low-Power activ.
 Sleep forever!
 ```
 
+### ADC-Kalibrierung-Programmcode für beelogger - {beelogger_Kalibrierung_ADC_XXXXXX.ino}
+Die Spannungsüberwachung des Akkus muss mit ```beelogger_Kalibrierung_ADC_230607.ino``` kalibriert werden. Hierzu muss die Akkuspannung am Beelogger mit einem Voltmeter gemessen werden. Wenn du *keinen Akku* hast bitte trotzdem die Spannung messen damit die Test-Sketche weiter unten funktionieren.
+
+Siehe auch unten in der Checklisten Tabelle.
+
+![grafik](https://github.com/bees4gymeck/beelogger/assets/137496089/f4a29980-83c6-4dc1-8d82-4a733088f9a9)
+
+Ausgabe im Monitor
+```
+beelogger Kalibrierung ADC 07.06.2023
+ beelogger-Universal mit Arduino Nano 
+Kalib_Spannung: 7840
+
+Starte Uhrbaustein:
+Datum und Uhrzeit aktuell im Uhrbaustein: 
+18.7.2023 15:9:14 
+Uhrbaustein initialisiert.
+
+die mit dem Multimeter gemessene Akkuspannung: 7.84 V
+der gemessene digitale 'Bitwert': 2113
+ 
+Die mit dieser Kalibrierung ermittelte Akkuspannung betraegt:7.84 V
+ 
+ Die Zeilen für die Konfiguration:
+ 
+const long Kalib_Spannung =  7840;    // Hier ist der Wert aus der Kalibrierung einzutragen
+const long Kalib_Bitwert  =  2113;    // Hier ist der Wert aus der Kalibrierung einzutragen
+```
+Die Zeilen für die Konfiguration sind gleich für den Power ON/OFF Test im Script ```beelogger_Test_Pwr_OnOff_XXXXXX.ino``` notwendig.
+
+### Power – ON/OFF -Test-Programmcode für beelogger-Universal und beelogger-SMD {beelogger_Test_Pwr_OnOff_XXXXXX.ino}
+Hier wird die Funktion der Uhr und deren eingebautem Temperatursensor getestet. Der Temperatursensor aus der Uhr wird übrigens für die Temparaturkalibrierung der Waage verwendet. 
+Wir kopieren die Zeilen von oben  hier rein: beelogger_Test_Pwr_OnOff_230401.ino.
+
 
 
 ### Checkliste
- |Test|Status|Anmerkungen|
- |---|---|---|
+ |Variable|Wertebereich|Wert|Anmerkungen|
+ |---|---|---|---|
+ |Kalib_Spannung|7.84V -> 7840mV|7840|ADC: Gemessen wird die Spannung des Akkus an den Anschlussklemmen der beelogger Platine und im Sketch in Millivolt eingetragen werden.|
+ |Kalib_Bitwert||2113|Wird ermittelt mit ```beelogger_Kalibrierung_ADC_XXXXXX.ino```|
+ |||||
  
- |Arduino Libs in genau der bei beelogger angegebenen Version in IDE konfiguriert|||
- |jetzt|aber| gut|
