@@ -152,6 +152,8 @@ Sleep-Modus mit Power-OFF ist aktiviert, bitte warten ...
 ```
 nach nochmal 4 Minuten
 ```
+>>>>> Power - ON / OFF Test erfolgreich!  <<<<< 
+................. Test beendet!
 ```
 
 ### Stockwaage – Kalibrierung & Test {beelogger_Kalibrierung_Waage_XXXXXX.ino}
@@ -220,6 +222,10 @@ x = Kalibrierung wiederholen.
 
 ...
 ```
+Die Zeilen für die Konfiguration benötigen wir später beim Hauptprogramm.
+
+### WLAN – ESP8266 Konfiguration
+Ob die auf [WLAN – ESP8266 Konfiguration](https://beelogger.de/netzwerk/wlan_esp8266/wlan_esp8266-config) beschriebene Konfiguration wirklich notwendig ist, ist noch nicht zu 100% bekannt. Es ist relativ aufwendig.
 
 
 
@@ -230,7 +236,10 @@ Sammlung aller Parameterwerte die bei den Tests ermittelt werden.
  |---|---|---|---|
  |Kalib_Spannung|7.84V -> 7840mV|7840|ADC: Gemessen wird die Spannung des Akkus an den Anschlussklemmen der beelogger Platine und im Sketch in Millivolt eingetragen werden.|
  |Kalib_Bitwert||2113|Wird ermittelt mit ```beelogger_Kalibrierung_ADC_XXXXXX.ino```|
- |||||
+ |Kalibriertes Gewicht|1,079kg|1079|Notwendig für Kalibrierung der Waage|
+ |Taragewicht||506502|Ergebnis der Waagen Kalibrierung mit ```beelogger_Kalibrierung_Waage_XXXXXX.ino```|
+ |Skalierung||1070750.75|Ergebnis der Waagen Kalibrierung mit ```beelogger_Kalibrierung_Waage_XXXXXX.ino```|
+ 
 
 
  
